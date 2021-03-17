@@ -73,3 +73,19 @@ source docs/db.sql;
 ip为服务器ip,端口为7001  
 registryHost: '182.22.2.128:7001', 
 
+
+
+### 启动  
+node dispatch.js  
+
+使用pm2进行管理启动  
+安装pm2   
+启动   
+pm2 start dispatch.js  
+
+web服务器
+服务 7001    
+端口 7002  
+
+### NPM registry manager 
+nrm 

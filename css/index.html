@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+  <head>
+    <title>实现元素自适应自动均衡间距排列</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style type="text/css">
+      .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        border: solid 1px #000;
+        justify-content: space-between;
+      }
+      .wrapper::after {
+        content: '';
+        flex: 1;
+      }
+      .item {
+        width: 80px;
+        height: 40px;
+        box-sizing: border-box;
+        border: solid 1px #ccc;
+      }
+      .vis {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="item"><div>AAA</div></div>
+      <div class="item"><div>BBB</div></div>
+      <div class="item"><div>CCC</div></div>
+      <div class="item"><div>DDD</div></div>
+      <div class="item"><div>EEE</div></div>
+      <div class="item"><div>FFF</div></div>
+      <!-- <div class="item vis"></div>
+      <div class="item vis"></div> -->
+    </div>
+  </body>
+</html>
