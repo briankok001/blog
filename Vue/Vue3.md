@@ -66,6 +66,22 @@ v-for
 v-enter改为v-enter-from
 v-leave改为v-leave-from
 
+
+#### 异步组件：
+vue2
+components: {
+  tab: () => import('../tab.vue')
+}
+
+vue3, 在vue3里需要使用defineAsyncComponent，否则有警告不报错并且组件显示不出来
+components: {
+  tab: () => defineAsyncComponent(import('../tab.vue'))
+}
+
+
 ### 注  
 在Vue2里单文件组件里支持多script; 在vue3里不支持多script标签  
 在Vue2里只支持单结点根元素，在Vue3里支持多根结点元素  
+
+组件自定义事件避免使用change关键字，如子组件里有input，input的值变了通知父组件更新时会自动触发change事件导致父组件在接收变更时最后会触发两次；一次是emit触发的一次是change事件触发的。
+
