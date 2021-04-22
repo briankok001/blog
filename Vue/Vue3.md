@@ -83,5 +83,5 @@ components: {
 在Vue2里单文件组件里支持多script; 在vue3里不支持多script标签  
 在Vue2里只支持单结点根元素，在Vue3里支持多根结点元素  
 
-组件自定义事件避免使用change关键字，如子组件里有input，input的值变了通知父组件更新时会自动触发change事件导致父组件在接收变更时最后会触发两次；一次是emit触发的一次是change事件触发的。
+组件自定义事件避免使用change关键字，如子组件里有input，input的值变了通知父组件更新时会自动触发change事件导致父组件在接收变更时最后会触发两次；一次是emit触发的一次是change事件触发的。如需使用需要设置emits选项。
 
